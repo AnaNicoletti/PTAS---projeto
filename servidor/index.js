@@ -32,12 +32,27 @@ app.get('/autenticar', async function(req, res){
   res.render('autenticar');
 })
 
+
+app.get('/cadastrar', async function(req, res){
+  res.render('cadastrar');
+})
+
+app.post('/cadastrou', async function(req, res){
+  const usuarios = await usuario.create(req.body)
+  res.json(usuarios); //ou res.json(cadastrado com sucesso)
+})
+
+app.get('/listar', async function(req, res){
+  const usuarios = await usuario.findAll()
+  res.json(usuarios);
+})
+
 app.get('/', async function(req, res){
   res.render("home")
 })
 
 app.post('/logar', (req, res) => {
-  if(req.body.user === 'Ana' && req.body.password === 'primavera'){
+  if(req.body.user === 'ana' && req.body.password === 'primavera'){
     const id = 1;
     const token = jwt.sign({ id }, process.env.SECRET, {
       expiresIn: 300 // expires in 5min
