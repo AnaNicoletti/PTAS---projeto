@@ -1,5 +1,45 @@
-<% usuarios.forEach(function(usuario){ %>
-    <%= usuario.nome %> 
-    <%= usuario.usuario %>
-    <%= usuario.senha %><br />
-<% }) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container"></div>
+  <header>
+    <img class="img" src="logo.png">
+    <div class="line"></div>
+  </header>
+  <div class="tudo">
+    <div class="meio">
+      <div class="primeiro"><br />
+        <h1>Lista de Usuários</h1>
+      </div>
+
+      <div class="wrapper4">
+        <% usuarios.forEach(function(usuario){ %>
+        <div class="p1">
+            <%= usuario.nome %>
+        </div>
+
+        <div class="p2">
+            <%= usuario.usuario %>
+        </div>
+
+        <div class="p3">
+            <%= usuario.senha %><br />
+        </div>
+            <% }) %>
+
+      </div>
+</div>
+</div>
+  </div>
+</div>
+</body>
+</html>
+
+
