@@ -35,7 +35,7 @@ main {
   background-color: #9a7767;
   height: 300px;
   width: 60%;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 19%;
   border-radius: 15px;
   opacity: 88%;
@@ -45,7 +45,7 @@ main {
   background-color: #9a7767;
   height: 400px;
   width: 60%;
-  margin-top: 12%;
+  margin-top: 10%;
   margin-left: 19%;
   border-radius: 15px;
   opacity: 88%;
@@ -55,7 +55,7 @@ main {
   background-color: #9a7767;
   height: 110px;
   width: 60%;
-  margin-top: 12%;
+  margin-top: 10%;
   margin-left: 19%;
   border-radius: 15px;
   opacity: 88%;
@@ -112,4 +112,5 @@ main {
 .p3 {
   font-size: 20px;
   color: white;
+  margin-left: 22%;
 }
