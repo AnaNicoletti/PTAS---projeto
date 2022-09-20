@@ -1,9 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  }
+}
 
-body{
+body {
   background-color: #cfb2a5;
 }
 
@@ -13,26 +13,26 @@ body{
   width: 100%;
 }
 
-header{
+header {
   height: 100px;
-  background-color: #ffffff ;
+  background-color: #ffffff;
   width: 100%;
 }
 
-.line{
-  background-color: #9A7767 ;
+.line {
+  background-color: #9a7767;
   height: 5px;
   width: 100%;
   margin-top: -0.2%;
 }
 
-.img{
+.img {
   height: 95px;
   width: 14%;
 }
 
-main{
-  background-color: #9A7767 ;
+main {
+  background-color: #9a7767;
   height: 300px;
   width: 60%;
   margin-top: 15%;
@@ -41,8 +41,8 @@ main{
   opacity: 88%;
 }
 
-.meio{
-  background-color: #9A7767 ;
+.meio {
+  background-color: #9a7767;
   height: 400px;
   width: 60%;
   margin-top: 12%;
@@ -51,19 +51,29 @@ main{
   opacity: 88%;
 }
 
-.primeiro{
+.meiodeslog {
+  background-color: #9a7767;
+  height: 110px;
+  width: 60%;
+  margin-top: 12%;
+  margin-left: 19%;
+  border-radius: 15px;
+  opacity: 88%;
+}
+
+.primeiro {
   text-align: center;
   color: white;
 }
 
-.titulo{
+.titulo {
   font-size: 20px;
   color: white;
   text-align: center;
   margin-left: 25%;
 }
 
-.caixa{
+.caixa {
   height: 30px;
   width: 50%;
   font-size: 15px;
@@ -76,14 +86,14 @@ main{
   border-width: 0.5px;
 }
 
-.botao{
+.botao {
   display: block;
   margin: 0 auto;
   margin-top: 2%;
   border-radius: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
-  background-color: #7E5644;
+  background-color: #7e5644;
   padding: 10px 40px;
   border-color: rgba(86, 54, 40, 1);
   transition-duration: 0.4s;
@@ -91,13 +101,15 @@ main{
   font-size: 20px;
 }
 
-.wrapper4{
+.wrapper4 {
   display: grid;
   grid-template-columns: repeat(3, 7fr);
   margin-top: 5%;
 }
 
-.p1, .p2, .p3{
+.p1,
+.p2,
+.p3 {
   font-size: 20px;
   color: white;
 }
