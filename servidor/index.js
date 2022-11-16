@@ -1,4 +1,6 @@
 // JWT
+const {decrypt,encrypt}=require("./criptografia")
+
 require("dotenv-safe").config();
 const jwt = require('jsonwebtoken');
 var { expressjwt: expressJWT } = require("express-jwt");
@@ -38,7 +40,14 @@ app.get('/cadastrar', async function(req, res){
 })
 
 app.post('/cadastrou', async function(req, res){
-  const usuarios = await usuario.create(req.body)
+  const {nome,senha} = req.body
+  const senhaEncrypt = encrypt(senha);
+  const usuarios = await usuario.create({
+    nome,
+    usuario,
+    usuario:req.body.usuario,
+    senha: senhaEncrypt
+  })
   res.json(usuarios); //ou res.json(cadastrado com sucesso)
 })
 
@@ -52,8 +61,10 @@ app.get('/', async function(req, res){
 })
 
 app.post('/logar', async (req, res) => {
+  const {senha} = req.body
   const usuarios= await usuario.findOne({where: {usuario: req.body.usuario}})
-  if(req.body.usuario === usuarios.usuario && req.body.senha === usuarios.senha){
+  const senhaDecrypt = decrypt(usuarios.senha);
+  if(req.body.usuario === usuarios.usuario && senha === senhaDecrypt){
     const id = 1;
     const token = jwt.sign({ id }, process.env.SECRET, {
       expiresIn: 300 // expires in 5min
