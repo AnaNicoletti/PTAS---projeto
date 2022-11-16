@@ -1,10 +1,11 @@
 'use strict';
+const {encrypt} = require("../criptografia")
 
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('usuarios', [
-      { nome: 'John Doe', senha: '123', usuario: "doe" },
-      { nome: 'Picolo', senha: '123', usuario: "luiz" },
+      { nome: 'John Doe', senha:encrypt('123'), usuario: "doe" },
+      { nome: 'Picolo', senha:encrypt('123'), usuario: "luiz" },
     ], {});
   },
 
